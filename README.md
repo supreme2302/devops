@@ -228,7 +228,7 @@ public class WordClient {
 }
 ```
 
-Здесь мы инжектим WebClient.Builder который сконфигурирован специальным образом.
+Здесь мы инжектим WebClient.Builder, который сконфигурирован специальным образом.
 
 Конфиг WebClient.Builder bean:
 ```java
@@ -255,7 +255,7 @@ public class WebClientConfiguration {
 
 ### ConfigMap
 
-В k8s есть специальный ресур ConfigMap в которой можно хранить конфигурации для приложения.
+В k8s есть специальный ресурс ConfigMap в котором можно хранить конфигурации для приложения.
 
 Spring Boot поддерживает чтение этих конфигов см [документацию](https://cloud.spring.io/spring-cloud-static/spring-cloud-kubernetes/1.0.0.M2/multi/multi__configmap_propertysource.html)
  
