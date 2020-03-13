@@ -1,0 +1,25 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+consumer/.gradle
+consumer/build/
+
+producer/.gradle
+producer/build/
+
+### IntelliJ IDEA ###
+consumer/.idea
+consumer/*.iws
+consumer/*.iml
+consumer/*.ipr
+consumer/out/
+
+producer/.idea
+producer/*.iws
+producer/*.iml
+producer/*.ipr
+producer/out/

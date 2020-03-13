@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.resilience4j:resilience4j-bulkhead:1.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.resilience4j/resilience4j-bulkhead/1.1.0/8b790f99a0b37be5ed46af2bf464d98e4b0b9f26/resilience4j-bulkhead-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.resilience4j/resilience4j-bulkhead/1.1.0/25bac20598a3996fbb1db1347519f0b4d46c6cf7/resilience4j-bulkhead-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,38 @@
+
+info:
+  name: ${spring.application.name}
+
+server:
+  port: 8080
+
+client:
+  producer:
+    name: producer-service
+
+feign:
+  client:
+    config:
+      producer-service:
+        connectTimeout: 1000
+        readTimeout: 1000
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      registerHealthIndicator: false
+      slidingWindowSize: 10
+      minimumNumberOfCalls: 5
+      permittedNumberOfCallsInHalfOpenState: 3
+      automaticTransitionFromOpenToHalfOpenEnabled: true
+      waitDurationInOpenState: 2s
+      failureRateThreshold: 50
+      eventConsumerBufferSize: 10
+      recordExceptions:
+        - java.lang.Throwable
+  instances:
+    producer-service:
+      baseConfig: default
+
+logging:
+  level:
+    root: info

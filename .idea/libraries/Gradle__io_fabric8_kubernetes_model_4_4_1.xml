@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.fabric8:kubernetes-model:4.4.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.fabric8/kubernetes-model/4.4.1/2ecb40fa414b161204a3b223b5a82496bafcd3b9/kubernetes-model-4.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.fabric8/kubernetes-model/4.4.1/2e2ebb6b08a51f5067df0942f1bf70c0c13eef9f/kubernetes-model-4.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,77 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+}
+
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'ru.supreme.devops'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('springCloudVersion', "Hoxton.RELEASE")
+	set('resilience4jVersion', '1.1.0')
+}
+
+build.doLast {
+	copy {
+		from(zipTree("build/libs/${rootProject.name}-${version}.jar"))
+		into("build/dependency")
+	}
+}
+
+dependencies {
+	//Metrics
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'io.micrometer:micrometer-registry-prometheus'
+
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+	//Tracing
+	implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
+
+	//Circuit breaker
+	implementation "io.github.resilience4j:resilience4j-spring-boot2:${resilience4jVersion}"
+	implementation "io.github.resilience4j:resilience4j-reactor:${resilience4jVersion}"
+
+	//For Openshift
+	implementation 'org.springframework.cloud:spring-cloud-starter-kubernetes'
+	implementation 'org.springframework.cloud:spring-cloud-starter-kubernetes-ribbon'
+	implementation 'org.springframework.cloud:spring-cloud-starter-kubernetes-config'
+
+	//Logs
+	implementation 'net.logstash.logback:logstash-logback-encoder:6.3'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	testImplementation 'io.projectreactor:reactor-test'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+test {
+	useJUnitPlatform()
+}

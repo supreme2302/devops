@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <springProperty scope="context" name="application_name" source="spring.application.name"/>
+
+    <springProfile name="!elk">
+        <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+                <charset>utf8</charset>
+            </encoder>
+        </appender>
+
+        <root level="info">
+            <appender-ref ref="Console"/>
+        </root>
+
+    </springProfile>
+
+    <springProfile name="elk">
+        <appender name="jsonConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+        </appender>
+
+        <root level="info">
+            <appender-ref ref="jsonConsoleAppender"/>
+        </root>
+    </springProfile>
+</configuration>

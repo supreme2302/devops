@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.zipkin.brave:brave-instrumentation-kafka-streams:5.9.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.zipkin.brave/brave-instrumentation-kafka-streams/5.9.0/8fa9f4a2880a3c6a623945d3442620e6d550dc2c/brave-instrumentation-kafka-streams-5.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.zipkin.brave/brave-instrumentation-kafka-streams/5.9.0/9ad1a4fa444dfacecf8ef677614ea56a00456cef/brave-instrumentation-kafka-streams-5.9.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

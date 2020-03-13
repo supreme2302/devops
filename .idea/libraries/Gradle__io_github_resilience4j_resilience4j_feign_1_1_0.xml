@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.resilience4j:resilience4j-feign:1.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.resilience4j/resilience4j-feign/1.1.0/16e00751361c78811fa6394377fbb09919255fc1/resilience4j-feign-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.resilience4j/resilience4j-feign/1.1.0/525f09a64784b406812fc93efe978416049c6c06/resilience4j-feign-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

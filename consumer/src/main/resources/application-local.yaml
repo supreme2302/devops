@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    discovery:
+      enabled: false
+    kubernetes:
+      config:
+        enabled: false
+      ribbon:
+        enabled: false
+      reload:
+        enabled: false
+  zipkin:
+    enabled: false
+
+producer-service:
+  ribbon:
+    listOfServers: http://localhost:9090

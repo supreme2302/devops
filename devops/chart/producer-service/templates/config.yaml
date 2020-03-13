@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "producer-service.fullname" . }}
+  labels:
+  {{- include "producer-service.labels" . | nindent 4 }}
+data:
+  application.yaml: |-
+    spring:
+    {{- if and .Values.tracing.enabled .Values.tracing.zipkinUrl }}
+      zipkin:
+        base-url: {{ .Values.tracing.zipkinUrl }}
+        enabled: true
+      sleuth:
+        sampler:
+          probability: {{ .Values.tracing.probability }}
+    {{- else }}
+      zipkin:
+        enabled: false
+    {{- end }}
+
+      cloud:
+        kubernetes:
+          ribbon:
+            mode: {{ .Values.discoveryMode }}
+
+    logging:
+    {{- with .Values.logging.level }}
+      level:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

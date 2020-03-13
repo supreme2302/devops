@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.cloud:spring-cloud-kubernetes-core:1.1.0.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-kubernetes-core/1.1.0.RELEASE/1946664abb4a51861db179dc56c2cf66f405f68a/spring-cloud-kubernetes-core-1.1.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-kubernetes-core/1.1.0.RELEASE/87a9eb5113a7cd97f0da85833ad8da2915a085ad/spring-cloud-kubernetes-core-1.1.0.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

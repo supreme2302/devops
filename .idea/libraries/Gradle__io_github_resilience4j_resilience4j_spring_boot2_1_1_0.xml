@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.resilience4j:resilience4j-spring-boot2:1.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.resilience4j/resilience4j-spring-boot2/1.1.0/dda668fafc03e8164fb399d2ba2e9a796487182f/resilience4j-spring-boot2-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.resilience4j/resilience4j-spring-boot2/1.1.0/5164b03e248d11e0ed2512c62d206287e630e7de/resilience4j-spring-boot2-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

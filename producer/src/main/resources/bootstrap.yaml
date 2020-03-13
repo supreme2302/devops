@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    kubernetes:
+      config:
+        enabled: true
+      reload:
+        enabled: true
+        strategy: restart_context
+
+management:
+  server:
+    port: 8081
+  endpoint:
+    restart:
+      enabled: true
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include:
+          - health
+          - info
+          - prometheus
